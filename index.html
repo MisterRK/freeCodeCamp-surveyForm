@@ -3,9 +3,38 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
+   <title>Survey Form</title>
 </head>
 <body>
-   
+   <h1 id="title">This is some sort of title</h1>
+   <p id="description"> this is some sort of description</p>
+   <form id="survey-form">
+      <label id="name-label" for="name">Name: </label>
+      <input required id="name" type="text" placeholder="name">
+      <label id ="email-label" for="email">Email:</label>
+      <input required id="email" type="email" placeholder="email address">
+      <label  id="number-label" for="number">Number:</label>
+      <input required id="number" type="number" min="1" max="10" placeholder="rating">
+      <select name="" id="dropdown">
+         <option value="never">Never</option>
+         <option value="sometimes">Sometimes</option>
+         <option value="always">Always</option>
+      </select>
+      <input type="radio" name="would-return" value="I would not return"> I would not return </input>
+      <input type="radio" name="would-return" value="I might return"> I might return </input>
+      <input type="radio" name="would-return" value="I will return"> I will return </input>
+
+      <input type="checkbox" value="something"> Something </input>
+      <input type="checkbox" value="something"> Something </input>
+      <input type="checkbox" value="something"> Something </input>
+      <input type="checkbox" value="something"> Something </input>
+
+      <label for="additional-comments">Additional Comments</label>
+      <textarea name="additional-comments" id="" cols="30" rows="10"></textarea>
+
+      <button type="submit" id="submit">Submit</button>
+   </form>
+
+   <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 </html>
