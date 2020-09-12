@@ -4,35 +4,82 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Survey Form</title>
+   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="index.css">
 </head>
 <body>
-   <h1 id="title">This is some sort of title</h1>
-   <p id="description"> this is some sort of description</p>
+   <h1 id="title">Did you enjoy your visit?</h1>
+   <p id="description">Please tell us about your most recent trip to Our Business</p>
    <form id="survey-form">
-      <label id="name-label" for="name">Name: </label>
-      <input required id="name" type="text" placeholder="name">
-      <label id ="email-label" for="email">Email:</label>
-      <input required id="email" type="email" placeholder="email address">
-      <label  id="number-label" for="number">Number:</label>
-      <input required id="number" type="number" min="1" max="10" placeholder="rating">
-      <select name="" id="dropdown">
-         <option value="never">Never</option>
-         <option value="sometimes">Sometimes</option>
-         <option value="always">Always</option>
-      </select>
-      <input type="radio" name="would-return" value="I would not return"> I would not return </input>
-      <input type="radio" name="would-return" value="I might return"> I might return </input>
-      <input type="radio" name="would-return" value="I will return"> I will return </input>
+      <div class='form-section'>
+         <label id="name-label" for="name">Your Name: </label>
+         <input class="text-input" required id="name" type="text" placeholder="Jane Smith">
+      </div>
+      <br>
 
-      <input type="checkbox" value="something"> Something </input>
-      <input type="checkbox" value="something"> Something </input>
-      <input type="checkbox" value="something"> Something </input>
-      <input type="checkbox" value="something"> Something </input>
+      <div class="form-section">
+         <label id ="email-label" for="email">Your Email:</label>
+         <input class="text-input" required id="email" type="email" placeholder="John.Smith@ourbusiness.com">
+      </div>
+      <br>
+      <div class='form-section'>
+         <p>On a scale of 1-10 
+            <br>( 10 being the best ) 
+            <br>How was your experience at 
+            <br> Our Business</p>
 
-      <label for="additional-comments">Additional Comments</label>
-      <textarea name="additional-comments" id="" cols="30" rows="10"></textarea>
+         <input class="text-input" required id="number" type="number" min="1" max="10" placeholder="10">
+      </div>
+      <br>
+      
+      <div class='form-section'>
+         <label for="frequency">How often do you shop at Our Business?</label>
+         <br>
+         <select name="frequency" id="dropdown">
+            <option value="less-than-once">Less than once a week</option>
+            <option value="two-plus">Two or more times a week</option>
+            <option value="four-plus">Four </option>
+         </select>
+      </div>
+      <br>
 
-      <button type="submit" id="submit">Submit</button>
+      <div class="form-section">
+         <label for="returnability">How likely are you to shop <br> at Our Business again?</label><br>
+         <label for="would-not-return">
+            <input class='return-radio-btn' type="radio" name="would-return" value="I would not return">
+            <span>I would not return</span>
+         </label>
+         <label for="might-return">
+            <input class='return-radio-btn' type="radio" name="would-return" value="I might return">
+            <span>I might return</span>
+         </label>
+         <label for="would-return">
+            <input class='return-radio-btn' type="radio" name="will-return" value="I will return">
+            <span>I will return</span>
+         </label>
+      </div>
+      <br>
+
+      <div class="form-section">
+         <p>During your visit did you notice any of the following?
+         <br> ( check all that apply )
+         </p>
+         <input class="checkbox" type="checkbox" value="something"> Employees wearing face masks </input><br>
+         <input class="checkbox" type="checkbox" value="something"> Employees helping customers </input><br>
+         <input class="checkbox" type="checkbox" value="something"> Items misplaced on shelves </input><br>
+      </div>
+      <br>
+
+      <div class="form-section">
+         <label for="additional-comments">Additional Comments</label>
+         <br>
+         <textarea class="text-input" name="additional-comments" id="" cols="30" rows="10"></textarea>
+      </div>
+      <br>
+
+      <div class="form-section">
+         <button type="submit" id="submit">Submit</button>
+      </div>
    </form>
 
    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
