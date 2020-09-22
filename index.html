@@ -23,11 +23,13 @@
       </div>
       <br>
       <div class='form-section'>
-         <p>On a scale of 1-10 
-            <br>( 10 being the best ) 
-            <br>How was your experience at 
-            <br> Our Business</p>
-
+         <label id='number-label'>
+            <p>On a scale of 1-10 
+               <br>( 10 being the best ) 
+               <br>How was your experience at 
+               <br> Our Business
+            </p>
+         </label>
          <input class="text-input" required id="number" type="number" min="1" max="10" placeholder="10">
       </div>
       <br>
@@ -46,15 +48,15 @@
       <div class="form-section">
          <label for="returnability">How likely are you to shop <br> at Our Business again?</label><br>
          <label for="would-not-return">
-            <input class='return-radio-btn' type="radio" name="would-return" value="I would not return">
+            <input class='return-radio-btn' type="radio" name="return-chance" value="I would not return">
             <span>I would not return</span>
          </label>
          <label for="might-return">
-            <input class='return-radio-btn' type="radio" name="would-return" value="I might return">
+            <input class='return-radio-btn' type="radio" name="return-chance" value="I might return">
             <span>I might return</span>
          </label>
          <label for="would-return">
-            <input class='return-radio-btn' type="radio" name="will-return" value="I will return">
+            <input class='return-radio-btn' type="radio" name="return-chance" value="I will return">
             <span>I will return</span>
          </label>
       </div>
